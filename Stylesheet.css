@@ -1,0 +1,196 @@
+.nav-bar {
+    background-color: white;
+    padding: 0 20px;
+    height: 8rem;
+    align-items: center;
+}
+
+.transparentlogo {
+    height: 60px;
+    padding-left: 10px;
+}
+
+.nav {
+    flex-wrap: nowrap;
+    text-align: right;
+}
+
+.nav-link {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: #1a1b1f;
+    font-size: 20px;
+    font-family: "Altone";
+}
+
+.active {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: #ff0040;
+    font-size: 20px;
+    font-family: "Altone";
+}
+
+body {
+    background-color: #f2f0f0;
+}
+
+.about-body {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+.photo {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.myPhoto {
+    max-width: 90%;
+    height: auto;
+}
+
+.name-block {
+    display: inline-block;
+    text-align: left;
+}
+
+h1.name {
+    font-family: "Montserrat";
+    text-decoration: underline;
+    font-size: 40spx;
+    font-weight: 400;
+}
+
+h1.project-title {
+    font-family: "Montserrat";
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+h2.why {
+    font-family: "Montserrat";
+    font-size: 30px;
+    font-weight: 400;
+}
+
+h3.built-with {
+    font-family: "Montserrat";
+    font-size: 20px;
+    color: #1a1b1f
+}
+
+.subtitle {
+    font-family: "Montserrat";
+    font-weight: 300;
+    font-size: 25px;
+    letter-spacing: 0.2em;
+    color: #4c4c4c;
+    padding-bottom: 5px;
+
+    line-height: 10px;
+    margin-right: -0.2em;
+    /* cancels trailing space */
+    white-space: nowrap;
+}
+
+p {
+    width: 90%;
+    font-family: "Montserrat";
+    font-size: 18px;
+    font-weight: 400;
+    color: #616161;
+    line-height: 28px;
+}
+
+p.projects {
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 400;
+    color: #616161
+}
+
+.work-section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.github-repo {
+    background-color: #ff294c;
+    padding: 10px;
+    font-family: "Montserrat";
+    border-radius: 15px;
+    color: white;
+}
+
+.github-repo:hover {
+    background-color: #dc2342;
+    padding: 10px;
+    font-family: "Montserrat";
+    border-radius: 15px;
+    color: rgb(223, 223, 223);
+}
+
+pre[class*="language-"],
+code[class*="language-"] {
+    font-size: 12px;
+}
+
+.carousel-item pre {
+    padding: 1rem;
+    overflow-x: auto;
+}
+
+pre[class*="language-"] {
+    line-height: 1.35;
+}
+
+#codeCarousel {
+    width: 100%;
+}
+
+.footer {
+    background-color: white;
+    padding: 0 20px;
+    height: 6rem;
+}
+
+.link-bar {
+    flex-wrap: nowrap;
+}
+
+.footer-link {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: #1a1b1f;
+    font-size: 18px;
+    font-family: "Altone";
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: "Altone";
+    src: url(Content/Fonts/AltoneTrial-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(Content/Fonts/Montserrat-Regular.otf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(Content/Fonts/Montserrat-Light.otf);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Creato";
+    src: url(Content/Fonts/CreatoDisplay-Regular.otf);
+    font-weight: 400;
+}
