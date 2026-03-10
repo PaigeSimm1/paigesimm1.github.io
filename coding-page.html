@@ -15,12 +15,12 @@
             <div class="row nav-bar align-items-center">
 
                 <!-- Logo -->
-                <div class="col-auto">
+                <div class="col-md-6">
                     <img src="Content/Photos/transparentlogo.png" class="transparentlogo">
                 </div>
 
                 <!-- Nav -->
-                <div class="col d-flex justify-content-end">
+                <div class="col-md-6 justify-content-end">
                     <ul class="nav">
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">Home</a>
@@ -39,7 +39,7 @@
             <h1 class="project-title">Summer 2023 - Sugar Crush</h1>
 
             <div class="row">
-                <div class="col">
+                <div class="col-md-6">
                     <h3 class="built-with">Built using Roblox Studio, Lua, and Blender.</h3>
                     <br>
                     <p class="projects">Planning Sugar Crush was my senior project in high school, and I began building
@@ -50,7 +50,7 @@
                         entirely by me.</p>
                 </div>
 
-                <div class="col">
+                <div class="col-md-6">
                     <div class="ratio ratio-16x9">
                         <iframe src="https://www.youtube.com/embed/wGyOSyrvP5c" title="Sugar Crush Demo"
                             allowfullscreen>
@@ -58,16 +58,14 @@
                     </div>
 
                     <br>
-                    <a href="https://github.com/PaigeSimm1/SugarCrush" class="btn github-repo">GitHub Repository</a>
+                    <a href="https://github.com/PaigeSimm1/SugarCrush" class="btn github-repo" target="_blank">GitHub
+                        Repository</a>
                 </div>
             </div>
-
-            <div class="row">
-                <div class="col">
-                    <div class="carousel slide" id="codeCarousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <pre><code class="language-lua">
+            <div class="carousel slide" id="scCarousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <pre><code class="language-lua">
 -- Calculates when the ore starts spawning
 local oreStart = oreZone.Position + Vector3.new(-oreZone.Size.X/2, oreZone.Size.Y/2, -oreZone.Size.Z/2) + Vector3.new(stones["Soft Stone"].Size.X/2, -stones["Soft Stone"].Size.Y/2, stones["Soft Stone"].Size.Z/2)
 
@@ -90,10 +88,10 @@ for y = 0, (oresDeep - 1) do
 	end
 end
 </code></pre>
-                            </div>
+                    </div>
 
-                            <div class="carousel-item">
-                                <pre><code class="language-lua">
+                    <div class="carousel-item">
+                        <pre><code class="language-lua">
 elseif instruction == "MINE ORE" then
 		
 	-- Checks cooldown
@@ -116,14 +114,225 @@ elseif instruction == "MINE ORE" then
 					oresInBackpack += oreValue.Value
 				end
 </code></pre>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#scCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#scCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+        <div class="container">
+            <div class="work-section">
+                <h1 class="project-title">Fall 2024 - Rhythm Platformer</h1>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3 class="built-with">Built using Unity and C#</h3>
+                        <br>
+                        <p class="projects">This was my first Unity project, built during my first semester as a
+                            Freshman.
+                            We were given 2 months to create our games. This is a rhythm-based platformer, inspired by
+                            Geometry Dash. I learned C# from scratch and built core systems like custom gravity, camera
+                            grid
+                            movement, object rotation, and collision logic. It taught me the fundamentals of Unity
+                            scripting
+                            and gave me a strong foundation for my later projects.</p>
+                        <br>
+                        <p class="projects">In addition to coding everything from scratch, all art and music was also
+                            made
+                            by me.</p>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/x1SsdfYu7Ng?si=Oo_vqPpQIYIyUHai"
+                                title="Rhythm Jump Demo" allowfullscreen>
+                            </iframe>
+                        </div>
+
+                        <br>
+                        <a href="https://github.com/PaigeSimm1/Rhythm-Jump" class="btn github-repo"
+                            target="_blank">GitHub
+                            Repository</a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="carousel slide" id="rjCarousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <pre><code class="language-cs">
+{
+    // If grounded, allows for the player to rotate 
+    if (IsGrounded)
+    {
+        Quaternion rot = CubeVisual.rotation;
+        rot.z = 0.0f;
+        CubeVisual.rotation = rot;
+            
+        // Emits ground particles if on the floor
+        if (LastTimeParticles + TimeBetweenParticles < Time.time)
+        {
+            GroundParticles.Emit(1);
+            LastTimeParticles = Time.time;
+        }
+    }
+    else
+    {
+        CubeVisual.Rotate(Vector3.back * RotationSpeed * Time.deltaTime); // Rotates the player based on the rotation speed variable in real time
+    }
+
+    // If you jump, it checks that you're grounded and are pressing one of the jump buttons
+    Jump = IsGrounded && (Jump || IsInput());
+    WasGround = IsGrounded;
+}
+</code></pre>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <pre><code class="language-cs">
+Vector2 velocity = rb.velocity;
+velocity.x = Speed * Time.fixedDeltaTime;
+rb.velocity = velocity;
+
+// Sets up jumping
+if (Jump)
+{
+	// Jumps upwards if gravity isn't reversed
+	if (IsGrounded == true && ReversedGravity == false)
+    {
+    	rb.AddForce(Vector2.up * JumpForce * rb.mass, ForceMode2D.Impulse);
+		Debug.Log("Jumped");
+		Jump = false;
+	}
+	else 
+	{
+		// Jumps downwards if gravity is reversed
+		Debug.Log("Jump reverse called");
+		rb.AddForce(Vector2.down * JumpForce * rb.mass, ForceMode2D.Impulse);
+		Jump = false;
+	}   
+}
+</code></pre>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#rjCarousel"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#rjCarousel"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="work-section">
+            <h1 class="project-title">Winter 2024 - AR Game</h1>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="built-with">Built using Unity and C#</h3>
+                    <br>
+                    <p class="projects">This AR game was a collaborative Unity project where I served as the group
+                        leader. I
+                        assigned roles, coordinated our workflow, and kept the project on track. We received permission
+                        to
+                        develop the game in 3D instead of the original 2D scope, which created both opportunities and
+                        new
+                        challenges. Inspired by round-based survival modes like Call of Duty: Zombies, the game used
+                        real-world space as the arena. I developed the enemy AI, round manager, dynamic difficulty
+                        scaling,
+                        and core spawning system. Working in AR pushed us to rethink player movement and spatial
+                        interaction, and this project significantly strengthened my leadership, AI programming, and AR
+                        design skills.</p>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/nXNpQdoUEPs?si=Rl4JMyR-apooTeS0" title="AR Game Demo"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <br>
+                    <a href="https://github.com/DMLRBLX/Tropical-Island-Saver" class="btn github-repo"
+                        target="_blank">GitHub Repository</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="carousel slide" id="arCarousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <pre><code class="language-cs">
+IEnumerator StartRound()
+    {
+        roundDisplay.text = currentRound.ToString(); // Increases the round display text
+        EnemiesToSpawn = BaseEnemyCount; // Spawns the amount of base enemies
+        EnemiesAlive = EnemiesToSpawn; // Changes how many enemies are alive from 0 to whatever the base number is set as
+        yield return SpawnEnemies();
+
+        // print($"Current Round: {currentRound} | Mod: {currentRound % miniBossSpawnRoundCycle}");
+        if (currentRound % miniBossSpawnRoundCycle == 0)
+        {
+            Transform spawnPoint = SpawnPoints[Random.Range(0, SpawnPoints.Count)]; // COPIED FROM SpawnEnemy()
+            Instantiate(miniBosses[currentMiniBoss == miniBosses.Count - 1 ? 0 : currentMiniBoss], spawnPoint.position, Quaternion.Euler(Vector3.zero));
+            currentMiniBoss++;
+        }
+    }
+</code></pre>
+                            </div>
+
+                            <div class="carousel-item">
+                                <pre><code class="language-cs">
+rb.isKinematic = false;
+
+if (GameManager.Instance.playerTarget == null) return; // If the target isn't found, try again
+	float distanceToPlayer = Vector3.Distance(transform.position, GameManager.Instance.playerTarget.position); // Sets the distance to the player as the target's position
+	if (distanceToPlayer <= attackRange) // If enemy is close enough to the target
+        {
+            AttackPlayer(); // Attack them
+        }
+        else // otherwise...
+        {
+            enemy.SetDestination(GameManager.Instance.playerTarget.position); // Set the enemy's NavMeshAgent destination to the player target
+                                                                                // Debug.Log("Set enemy destination"); // And tell us
+        }
+        // Stops the enemy if they reached destination to avoid hurdling
+        if (distanceToPlayer <= enemy.stoppingDistance)
+        {
+            enemy.isStopped = true;
+            anim.SetBool("IsWalking", false);
+        }
+        // Walking animation
+        if (rb.linearVelocity.magnitude > 0.1f)
+        {
+            anim.SetBool("IsWalking", true);
+        }
+    }
+</code></pre>
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#codeCarousel"
+                        <button class="carousel-control-prev" type="button" data-bs-target="#arCarousel"
                             data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#codeCarousel"
+                        <button class="carousel-control-next" type="button" data-bs-target="#arCarousel"
                             data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
@@ -132,14 +341,154 @@ elseif instruction == "MINE ORE" then
                 </div>
             </div>
         </div>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
-        </script>
+        <div class="work-section">
+            <h1 class="project-title">Summer 2025 - Beck Scholars Internship</h1>
 
-    <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-lua.min.js"></script>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="built-with">Built using Blocksmith Studio</h3>
+                    <br>
+                    <p class="projects">I was selected from over 50 applicants for a paid internship with
+                        Stem
+                        Forged as part of Boise State University's first year offering the Beck Scholars
+                        program. I
+                        was tasked with building an endless-runner game similar to Subway Surfers using
+                        their custom engine. The engine uses a visual scripting system instead of
+                        traditional programming, so I created the game using variables, spawners, triggers,
+                        and conditional logic. I also implemented a shop system that lets players purchase
+                        new vehicle colors and upgrades. It was a fun, challenging project, and I’m proud of
+                        the final result. I also made the music and sound effects.</p>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/nXNpQdoUEPs?si=Rl4JMyR-apooTeS0" title="AR Game Demo"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="work-section">
+                <h1 class="project-title">Winter 2024 - AR Game</h1>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3 class="built-with">Built using Unity and C#</h3>
+                        <br>
+                        <p class="projects">This AR game was a collaborative Unity project where I served as
+                            the group
+                            leader. I
+                            assigned roles, coordinated our workflow, and kept the project on track. We
+                            received permission
+                            to
+                            develop the game in 3D instead of the original 2D scope, which created both
+                            opportunities and
+                            new
+                            challenges. Inspired by round-based survival modes like Call of Duty: Zombies,
+                            the game used
+                            real-world space as the arena. I developed the enemy AI, round manager, dynamic
+                            difficulty
+                            scaling,
+                            and core spawning system. Working in AR pushed us to rethink player movement and
+                            spatial
+                            interaction, and this project significantly strengthened my leadership, AI
+                            programming, and AR
+                            design skills.</p>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/nXNpQdoUEPs?si=Rl4JMyR-apooTeS0"
+                                title="AR Game Demo" allowfullscreen>
+                            </iframe>
+                        </div>
+
+                        <br>
+                        <a href="https://github.com/DMLRBLX/Tropical-Island-Saver" class="btn github-repo"
+                            target="_blank">GitHub Repository</a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="carousel slide" id="arCarousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <pre><code class="language-cs">
+IEnumerator StartRound()
+    {
+        roundDisplay.text = currentRound.ToString(); // Increases the round display text
+        EnemiesToSpawn = BaseEnemyCount; // Spawns the amount of base enemies
+        EnemiesAlive = EnemiesToSpawn; // Changes how many enemies are alive from 0 to whatever the base number is set as
+        yield return SpawnEnemies();
+
+        // print($"Current Round: {currentRound} | Mod: {currentRound % miniBossSpawnRoundCycle}");
+        if (currentRound % miniBossSpawnRoundCycle == 0)
+        {
+            Transform spawnPoint = SpawnPoints[Random.Range(0, SpawnPoints.Count)]; // COPIED FROM SpawnEnemy()
+            Instantiate(miniBosses[currentMiniBoss == miniBosses.Count - 1 ? 0 : currentMiniBoss], spawnPoint.position, Quaternion.Euler(Vector3.zero));
+            currentMiniBoss++;
+        }
+    }
+</code></pre>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <pre><code class="language-cs">
+rb.isKinematic = false;
+
+if (GameManager.Instance.playerTarget == null) return; // If the target isn't found, try again
+	float distanceToPlayer = Vector3.Distance(transform.position, GameManager.Instance.playerTarget.position); // Sets the distance to the player as the target's position
+	if (distanceToPlayer <= attackRange) // If enemy is close enough to the target
+        {
+            AttackPlayer(); // Attack them
+        }
+        else // otherwise...
+        {
+            enemy.SetDestination(GameManager.Instance.playerTarget.position); // Set the enemy's NavMeshAgent destination to the player target
+                                                                                // Debug.Log("Set enemy destination"); // And tell us
+        }
+        // Stops the enemy if they reached destination to avoid hurdling
+        if (distanceToPlayer <= enemy.stoppingDistance)
+        {
+            enemy.isStopped = true;
+            anim.SetBool("IsWalking", false);
+        }
+        // Walking animation
+        if (rb.linearVelocity.magnitude > 0.1f)
+        {
+            anim.SetBool("IsWalking", true);
+        }
+    }
+</code></pre>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#arCarousel"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#arCarousel"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+                crossorigin="anonymous">
+                </script>
+
+            <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-lua.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-csharp.min.js"></script>
 </body>
 
 </html>
