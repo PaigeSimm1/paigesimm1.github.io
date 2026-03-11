@@ -127,48 +127,47 @@ elseif instruction == "MINE ORE" then
             </div>
         </div>
     </div>
-        <div class="container">
-            <div class="work-section">
-                <h1 class="project-title">Fall 2024 - Rhythm Platformer</h1>
+    <div class="container">
+        <div class="work-section">
+            <h1 class="project-title">Fall 2024 - Rhythm Platformer</h1>
 
-                <div class="row">
-                    <div class="col-md-6">
-                        <h3 class="built-with">Built using Unity and C#</h3>
-                        <br>
-                        <p class="projects">This was my first Unity project, built during my first semester as a
-                            Freshman.
-                            We were given 2 months to create our games. This is a rhythm-based platformer, inspired by
-                            Geometry Dash. I learned C# from scratch and built core systems like custom gravity, camera
-                            grid
-                            movement, object rotation, and collision logic. It taught me the fundamentals of Unity
-                            scripting
-                            and gave me a strong foundation for my later projects.</p>
-                        <br>
-                        <p class="projects">In addition to coding everything from scratch, all art and music was also
-                            made
-                            by me.</p>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="ratio ratio-16x9">
-                            <iframe src="https://www.youtube.com/embed/x1SsdfYu7Ng?si=Oo_vqPpQIYIyUHai"
-                                title="Rhythm Jump Demo" allowfullscreen>
-                            </iframe>
-                        </div>
-
-                        <br>
-                        <a href="https://github.com/PaigeSimm1/Rhythm-Jump" class="btn github-repo"
-                            target="_blank">GitHub
-                            Repository</a>
-                    </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="built-with">Built using Unity and C#</h3>
+                    <br>
+                    <p class="projects">This was my first Unity project, built during my first semester as a
+                        Freshman.
+                        We were given 2 months to create our games. This is a rhythm-based platformer, inspired by
+                        Geometry Dash. I learned C# from scratch and built core systems like custom gravity, camera
+                        grid
+                        movement, object rotation, and collision logic. It taught me the fundamentals of Unity
+                        scripting
+                        and gave me a strong foundation for my later projects.</p>
+                    <br>
+                    <p class="projects">In addition to coding everything from scratch, all art and music was also
+                        made
+                        by me.</p>
                 </div>
 
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="carousel slide" id="rjCarousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <pre><code class="language-cs">
+                <div class="col-md-6">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/x1SsdfYu7Ng?si=Oo_vqPpQIYIyUHai"
+                            title="Rhythm Jump Demo" allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <br>
+                    <a href="https://github.com/PaigeSimm1/Rhythm-Jump" class="btn github-repo" target="_blank">GitHub
+                        Repository</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="carousel slide" id="rjCarousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <pre><code class="language-cs">
 {
     // If grounded, allows for the player to rotate 
     if (IsGrounded)
@@ -194,10 +193,10 @@ elseif instruction == "MINE ORE" then
     WasGround = IsGrounded;
 }
 </code></pre>
-                                </div>
+                            </div>
 
-                                <div class="carousel-item">
-                                    <pre><code class="language-cs">
+                            <div class="carousel-item">
+                                <pre><code class="language-cs">
 Vector2 velocity = rb.velocity;
 velocity.x = Speed * Time.fixedDeltaTime;
 rb.velocity = velocity;
@@ -221,24 +220,24 @@ if (Jump)
 	}   
 }
 </code></pre>
-                                </div>
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#rjCarousel"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#rjCarousel"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
                         </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#rjCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#rjCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-
+    </div>
+    <div class="container">
         <div class="work-section">
             <h1 class="project-title">Winter 2024 - AR Game</h1>
 
@@ -341,7 +340,9 @@ if (GameManager.Instance.playerTarget == null) return; // If the target isn't fo
                 </div>
             </div>
         </div>
+    </div>
 
+    <div class="container">
         <div class="work-section">
             <h1 class="project-title">Summer 2025 - Beck Scholars Internship</h1>
 
@@ -363,132 +364,131 @@ if (GameManager.Instance.playerTarget == null) return; // If the target isn't fo
 
                 <div class="col-md-6">
                     <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/nXNpQdoUEPs?si=Rl4JMyR-apooTeS0" title="AR Game Demo"
+                        <iframe src="https://www.youtube.com/embed/YJBCfjV2fs8?si=sW4xIQ7x2fE33eu6" title="Driver Dash Demo"
                             allowfullscreen>
                         </iframe>
                     </div>
 
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="work-section">
+            <h1 class="project-title">Fall 2025 - Chord Generator</h1>
 
-            <div class="work-section">
-                <h1 class="project-title">Winter 2024 - AR Game</h1>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <h3 class="built-with">Built using Unity and C#</h3>
-                        <br>
-                        <p class="projects">This AR game was a collaborative Unity project where I served as
-                            the group
-                            leader. I
-                            assigned roles, coordinated our workflow, and kept the project on track. We
-                            received permission
-                            to
-                            develop the game in 3D instead of the original 2D scope, which created both
-                            opportunities and
-                            new
-                            challenges. Inspired by round-based survival modes like Call of Duty: Zombies,
-                            the game used
-                            real-world space as the arena. I developed the enemy AI, round manager, dynamic
-                            difficulty
-                            scaling,
-                            and core spawning system. Working in AR pushed us to rethink player movement and
-                            spatial
-                            interaction, and this project significantly strengthened my leadership, AI
-                            programming, and AR
-                            design skills.</p>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="ratio ratio-16x9">
-                            <iframe src="https://www.youtube.com/embed/nXNpQdoUEPs?si=Rl4JMyR-apooTeS0"
-                                title="AR Game Demo" allowfullscreen>
-                            </iframe>
-                        </div>
-
-                        <br>
-                        <a href="https://github.com/DMLRBLX/Tropical-Island-Saver" class="btn github-repo"
-                            target="_blank">GitHub Repository</a>
-                    </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="built-with">Built using HTML, CSS, and JavaScript.</h3>
+                    <br>
+                    <p class="projects">This Chord Progression Generator is a full-stack web app I built using HTML,
+                        CSS, Bootstrap, Node.js, and the OpenAI API. Users can select a musical style, scale, time
+                        signature, and BPM, and the server generates a machine-readable chord progression. I integrated
+                        Tone.js to play back the chords in real time and designed a streamlined UI with dropdown
+                        controls, a custom loader animation, and local storage support. This project combined my
+                        backgrounds in software development and music, and taught me a lot about API integration,
+                        asynchronous workflows, and structuring clean, interactive web tools.</p>
                 </div>
 
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="carousel slide" id="arCarousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <pre><code class="language-cs">
-IEnumerator StartRound()
-    {
-        roundDisplay.text = currentRound.ToString(); // Increases the round display text
-        EnemiesToSpawn = BaseEnemyCount; // Spawns the amount of base enemies
-        EnemiesAlive = EnemiesToSpawn; // Changes how many enemies are alive from 0 to whatever the base number is set as
-        yield return SpawnEnemies();
-
-        // print($"Current Round: {currentRound} | Mod: {currentRound % miniBossSpawnRoundCycle}");
-        if (currentRound % miniBossSpawnRoundCycle == 0)
-        {
-            Transform spawnPoint = SpawnPoints[Random.Range(0, SpawnPoints.Count)]; // COPIED FROM SpawnEnemy()
-            Instantiate(miniBosses[currentMiniBoss == miniBosses.Count - 1 ? 0 : currentMiniBoss], spawnPoint.position, Quaternion.Euler(Vector3.zero));
-            currentMiniBoss++;
-        }
-    }
-</code></pre>
-                                </div>
-
-                                <div class="carousel-item">
-                                    <pre><code class="language-cs">
-rb.isKinematic = false;
-
-if (GameManager.Instance.playerTarget == null) return; // If the target isn't found, try again
-	float distanceToPlayer = Vector3.Distance(transform.position, GameManager.Instance.playerTarget.position); // Sets the distance to the player as the target's position
-	if (distanceToPlayer <= attackRange) // If enemy is close enough to the target
-        {
-            AttackPlayer(); // Attack them
-        }
-        else // otherwise...
-        {
-            enemy.SetDestination(GameManager.Instance.playerTarget.position); // Set the enemy's NavMeshAgent destination to the player target
-                                                                                // Debug.Log("Set enemy destination"); // And tell us
-        }
-        // Stops the enemy if they reached destination to avoid hurdling
-        if (distanceToPlayer <= enemy.stoppingDistance)
-        {
-            enemy.isStopped = true;
-            anim.SetBool("IsWalking", false);
-        }
-        // Walking animation
-        if (rb.linearVelocity.magnitude > 0.1f)
-        {
-            anim.SetBool("IsWalking", true);
-        }
-    }
-</code></pre>
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#arCarousel"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#arCarousel"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
+                <div class="col-md-6">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/9yh5Ge4ysUI?si=MPdZu4nQo9kWblCm"
+                            title="Chord Progression Generator" allowfullscreen>
+                        </iframe>
                     </div>
+
+                    <br>
+                    <a href="https://github.com/PaigeSimm1/ChordGen" class="btn github-repo" target="_blank">GitHub
+                        Repository</a>
                 </div>
             </div>
 
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-                crossorigin="anonymous">
-                </script>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="carousel slide" id="cgCarousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <pre><code class="language-javascript">
+document.getElementById("play-btn").addEventListener("click", playProgression);
 
-            <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-lua.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-csharp.min.js"></script>
+// Protects against playing a blank progression
+async function playProgression() {
+    if (!chordProgression.length) return alert ("Generate a chord progression first!");
+
+    await Tone.start(); // Needed to start the audio
+    const synth = new Tone.PolySynth(Tone.Synth).toDestination(); // Starts the Tonal API's synth
+
+    let timeOffset = 0; // Bypass since I had chords that would play over each other
+
+    chordProgression.forEach(({ chord, duration }) => {
+        const notes = Tonal.Chord.get(chord).notes.map(n => n + "4");
+        Tone.Transport.scheduleOnce(time => { // Another bypass for that
+            synth.triggerAttackRelease(notes, duration, time);
+        }, `+${timeOffset}`);
+
+        const durSeconds = { "1n":4, "2n":2, "4n":1, "8n":0.5 }[duration] || 1;
+        timeOffset += durSeconds;
+    })
+
+    Tone.Transport.start(); // Plays the progression!
+}
+</code></pre>
+                            </div>
+
+                            <div class="carousel-item">
+                                <pre><code class="language-javascript">
+startGeneratingAnim();
+
+const saved = JSON.parse(localStorage.getItem("pendingChordForm"));
+
+let formData = new FormData();
+formData.set('Style-Select', saved.style);
+formData.set('scale-button', saved.scale);
+formData.set('time-button', saved.time);
+formData.set('bpm-control', saved.bpm);
+
+fetch('http://127.0.0.1:3000', {
+    method: 'POST',
+    body: formData
+})
+.then(response => response.json())
+.then(data => {
+    console.log(data);
+    localStorage.setItem("generatedChords", JSON.stringify(data.progression));
+    stopGeneratingAnim();
+    window.location.href = "Response.html";
+})
+.catch(err => {
+    console.error(err);
+    stopGeneratingAnim();
+});
+</code></pre>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#cgCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#cgCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-lua.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-csharp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
 </body>
 
 </html>
