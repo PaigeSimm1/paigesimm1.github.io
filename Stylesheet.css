@@ -20,6 +20,7 @@ div.link-bar {
 
 .transparentlogo {
     height: 60px;
+    width: auto;
     padding-left: 10px;
 }
 
@@ -228,34 +229,33 @@ padding-bottom: 1rem;
     font-family: "Altone";
     src: url(Content/Fonts/AltoneTrial-Regular.ttf);
     font-weight: 400;
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Montserrat";
     src: url(Content/Fonts/Montserrat-Bold.otf);
     font-weight: 600;
+    font-display: swap;
 }  
 
 @font-face {
     font-family: "Montserrat";
     src: url(Content/Fonts/Montserrat-Medium.otf);
     font-weight: 500;
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Montserrat";
     src: url(Content/Fonts/Montserrat-Regular.otf);
     font-weight: 400;
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Montserrat";
     src: url(Content/Fonts/Montserrat-Light.otf);
     font-weight: 300;
-}
-
-@font-face {
-    font-family: "Creato";
-    src: url(Content/Fonts/CreatoDisplay-Regular.otf);
-    font-weight: 400;
+    font-display: swap;
 }

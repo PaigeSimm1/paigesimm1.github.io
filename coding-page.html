@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <title>Work - PS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Portfolio projects by Paige Simmons, including Roblox, Unity, AR, and web development work.">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.min.css" rel="stylesheet">
@@ -16,7 +20,8 @@
 
                 <!-- Logo -->
                 <div class="col-6">
-                    <img src="Content/Photos/transparentlogo.png" class="transparentlogo">
+                    <img src="Content/Photos/transparentlogo.png" class="transparentlogo" width="256" height="256"
+                        loading="eager" alt="Colorful P and S Logo." decoding="async">
                 </div>
 
                 <!-- Nav -->
@@ -33,39 +38,43 @@
             </div>
         </div>
     </header>
+    <main>
+        <div class="container">
+            <div class="work-section">
+                <h1 class="project-title">Summer 2023 - Sugar Crush</h1>
 
-    <div class="container">
-        <div class="work-section">
-            <h1 class="project-title">Summer 2023 - Sugar Crush</h1>
-
-            <div class="row">
-                <div class="col-12 col-md-6">
-                    <h3 class="built-with">Built using Roblox Studio, Lua, and Blender.</h3>
-                    <br>
-                    <p class="projects">Planning Sugar Crush was my senior project in high school, and I began building
-                        it in my spare
-                        time before my first semester at Boise State. Developed in Roblox Studio using Lua, it’s a
-                        candy-themed mining simulator featuring a custom 12 × 12 mining grid that generates an array of
-                        physical blocks and randomizes ore types based on depth. All code, UI, and models were created
-                        entirely by me.</p>
-                </div>
-
-                <div class="col-12 col-md-6">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/wGyOSyrvP5c" title="Sugar Crush Demo"
-                            allowfullscreen>
-                        </iframe>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <h3 class="built-with">Built using Roblox Studio, Lua, and Blender.</h3>
+                        <br>
+                        <p class="projects">Planning Sugar Crush was my senior project in high school, and I began
+                            building
+                            it in my spare
+                            time before my first semester at Boise State. Developed in Roblox Studio using Lua, it’s a
+                            candy-themed mining simulator featuring a custom 12 × 12 mining grid that generates an array
+                            of
+                            physical blocks and randomizes ore types based on depth. All code, UI, and models were
+                            created
+                            entirely by me.</p>
                     </div>
 
-                    <br>
-                    <a href="https://github.com/PaigeSimm1/SugarCrush" class="btn github-repo" target="_blank">GitHub
-                        Repository</a>
+                    <div class="col-12 col-md-6">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/wGyOSyrvP5c" title="Sugar Crush Demo"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+
+                        <br>
+                        <a href="https://github.com/PaigeSimm1/SugarCrush" class="btn github-repo"
+                            target="_blank">GitHub
+                            Repository</a>
+                    </div>
                 </div>
-            </div>
-            <div class="carousel slide" id="scCarousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <pre><code class="language-lua">
+                <div class="carousel slide" id="scCarousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <pre><code class="language-lua">
 -- Calculates when the ore starts spawning
 local oreStart = oreZone.Position + Vector3.new(-oreZone.Size.X/2, oreZone.Size.Y/2, -oreZone.Size.Z/2) + Vector3.new(stones["Soft Stone"].Size.X/2, -stones["Soft Stone"].Size.Y/2, stones["Soft Stone"].Size.Z/2)
 
@@ -88,10 +97,10 @@ for y = 0, (oresDeep - 1) do
 	end
 end
 </code></pre>
-                    </div>
+                        </div>
 
-                    <div class="carousel-item">
-                        <pre><code class="language-lua">
+                        <div class="carousel-item">
+                            <pre><code class="language-lua">
 elseif instruction == "MINE ORE" then
 		
 	-- Checks cooldown
@@ -114,60 +123,63 @@ elseif instruction == "MINE ORE" then
 					oresInBackpack += oreValue.Value
 				end
 </code></pre>
+                        </div>
                     </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#scCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#scCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#scCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#scCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="work-section">
-            <h1 class="project-title">Fall 2024 - Rhythm Platformer</h1>
+        <div class="container">
+            <div class="work-section">
+                <h1 class="project-title">Fall 2024 - Rhythm Platformer</h1>
 
-            <div class="row">
-                <div class="col-12 col-md-6">
-                    <h3 class="built-with">Built using Unity and C#</h3>
-                    <br>
-                    <p class="projects">This was my first Unity project, built during my first semester as a
-                        Freshman.
-                        We were given 2 months to create our games. This is a rhythm-based platformer, inspired by
-                        Geometry Dash. I learned C# from scratch and built core systems like custom gravity, camera
-                        grid
-                        movement, object rotation, and collision logic. It taught me the fundamentals of Unity
-                        scripting
-                        and gave me a strong foundation for my later projects.</p>
-                    <br>
-                    <p class="projects">In addition to coding everything from scratch, all art and music was also
-                        made
-                        by me.</p>
-                </div>
-
-                <div class="col-12 col-md-6">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/x1SsdfYu7Ng?si=Oo_vqPpQIYIyUHai"
-                            title="Rhythm Jump Demo" allowfullscreen>
-                        </iframe>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <h3 class="built-with">Built using Unity and C#</h3>
+                        <br>
+                        <p class="projects">This was my first Unity project, built during my first semester as a
+                            Freshman.
+                            We were given 2 months to create our games. This is a rhythm-based platformer, inspired by
+                            Geometry Dash. I learned C# from scratch and built core systems like custom gravity, camera
+                            grid
+                            movement, object rotation, and collision logic. It taught me the fundamentals of Unity
+                            scripting
+                            and gave me a strong foundation for my later projects.</p>
+                        <br>
+                        <p class="projects">In addition to coding everything from scratch, all art and music was also
+                            made
+                            by me.</p>
                     </div>
 
-                    <br>
-                    <a href="https://github.com/PaigeSimm1/Rhythm-Jump" class="btn github-repo" target="_blank">GitHub
-                        Repository</a>
-                </div>
-            </div>
+                    <div class="col-12 col-md-6">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/x1SsdfYu7Ng?si=Oo_vqPpQIYIyUHai"
+                                title="Rhythm Jump Demo" allowfullscreen>
+                            </iframe>
+                        </div>
 
-            <div class="row">
-                <div class="col-12 col-md-6">
-                    <div class="carousel slide" id="rjCarousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <pre><code class="language-cs">
+                        <br>
+                        <a href="https://github.com/PaigeSimm1/Rhythm-Jump" class="btn github-repo"
+                            target="_blank">GitHub
+                            Repository</a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="carousel slide" id="rjCarousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <pre><code class="language-cs">
 {
     // If grounded, allows for the player to rotate 
     if (IsGrounded)
@@ -193,10 +205,10 @@ elseif instruction == "MINE ORE" then
     WasGround = IsGrounded;
 }
 </code></pre>
-                            </div>
+                                </div>
 
-                            <div class="carousel-item">
-                                <pre><code class="language-cs">
+                                <div class="carousel-item">
+                                    <pre><code class="language-cs">
 Vector2 velocity = rb.velocity;
 velocity.x = Speed * Time.fixedDeltaTime;
 rb.velocity = velocity;
@@ -220,64 +232,67 @@ if (Jump)
 	}   
 }
 </code></pre>
+                                </div>
                             </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#rjCarousel"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#rjCarousel"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#rjCarousel"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#rjCarousel"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="work-section">
-            <h1 class="project-title">Winter 2024 - AR Game</h1>
+        <div class="container">
+            <div class="work-section">
+                <h1 class="project-title">Winter 2024 - AR Game</h1>
 
-            <div class="row">
-                <div class="col-12 col-md-6">
-                    <h3 class="built-with">Built using Unity and C#</h3>
-                    <br>
-                    <p class="projects">This AR game was a collaborative Unity project where I served as the group
-                        leader. I
-                        assigned roles, coordinated our workflow, and kept the project on track. We received permission
-                        to
-                        develop the game in 3D instead of the original 2D scope, which created both opportunities and
-                        new
-                        challenges. Inspired by round-based survival modes like Call of Duty: Zombies, the game used
-                        real-world space as the arena. I developed the enemy AI, round manager, dynamic difficulty
-                        scaling,
-                        and core spawning system. Working in AR pushed us to rethink player movement and spatial
-                        interaction, and this project significantly strengthened my leadership, AI programming, and AR
-                        design skills.</p>
-                </div>
-
-                <div class="col-12 col-md-6">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/nXNpQdoUEPs?si=Rl4JMyR-apooTeS0" title="AR Game Demo"
-                            allowfullscreen>
-                        </iframe>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <h3 class="built-with">Built using Unity and C#</h3>
+                        <br>
+                        <p class="projects">This AR game was a collaborative Unity project where I served as the group
+                            leader. I
+                            assigned roles, coordinated our workflow, and kept the project on track. We received
+                            permission
+                            to
+                            develop the game in 3D instead of the original 2D scope, which created both opportunities
+                            and
+                            new
+                            challenges. Inspired by round-based survival modes like Call of Duty: Zombies, the game used
+                            real-world space as the arena. I developed the enemy AI, round manager, dynamic difficulty
+                            scaling,
+                            and core spawning system. Working in AR pushed us to rethink player movement and spatial
+                            interaction, and this project significantly strengthened my leadership, AI programming, and
+                            AR
+                            design skills.</p>
                     </div>
 
-                    <br>
-                    <a href="https://github.com/DMLRBLX/Tropical-Island-Saver" class="btn github-repo"
-                        target="_blank">GitHub Repository</a>
-                </div>
-            </div>
+                    <div class="col-12 col-md-6">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/nXNpQdoUEPs?si=Rl4JMyR-apooTeS0"
+                                title="AR Game Demo" allowfullscreen>
+                            </iframe>
+                        </div>
 
-            <div class="row">
-                <div class="col-12 col-md-6">
-                    <div class="carousel slide" id="arCarousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <pre><code class="language-cs">
+                        <br>
+                        <a href="https://github.com/DMLRBLX/Tropical-Island-Saver" class="btn github-repo"
+                            target="_blank">GitHub Repository</a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="carousel slide" id="arCarousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <pre><code class="language-cs">
 IEnumerator StartRound()
     {
         roundDisplay.text = currentRound.ToString(); // Increases the round display text
@@ -294,10 +309,10 @@ IEnumerator StartRound()
         }
     }
 </code></pre>
-                            </div>
+                                </div>
 
-                            <div class="carousel-item">
-                                <pre><code class="language-cs">
+                                <div class="carousel-item">
+                                    <pre><code class="language-cs">
 rb.isKinematic = false;
 
 if (GameManager.Instance.playerTarget == null) return; // If the target isn't found, try again
@@ -324,91 +339,92 @@ if (GameManager.Instance.playerTarget == null) return; // If the target isn't fo
         }
     }
 </code></pre>
+                                </div>
                             </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#arCarousel"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#arCarousel"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#arCarousel"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#arCarousel"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="container">
-        <div class="work-section">
-            <h1 class="project-title">Summer 2025 - Beck Scholars Internship</h1>
+        <div class="container">
+            <div class="work-section">
+                <h1 class="project-title">Summer 2025 - Beck Scholars Internship</h1>
 
-            <div class="row">
-                <div class="col-12 col-md-6">
-                    <h3 class="built-with">Built using Blocksmith Studio</h3>
-                    <br>
-                    <p class="projects">I was selected from over 50 applicants for a paid internship with
-                        Stem
-                        Forged as part of Boise State University's first year offering the Beck Scholars
-                        program. I
-                        was tasked with building an endless-runner game similar to Subway Surfers using
-                        their custom engine. The engine uses a visual scripting system instead of
-                        traditional programming, so I created the game using variables, spawners, triggers,
-                        and conditional logic. I also implemented a shop system that lets players purchase
-                        new vehicle colors and upgrades. It was a fun, challenging project, and I’m proud of
-                        the final result. I also made the music and sound effects.</p>
-                </div>
-
-                <div class="col-12 col-md-6">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/YJBCfjV2fs8?si=sW4xIQ7x2fE33eu6"
-                            title="Driver Dash Demo" allowfullscreen>
-                        </iframe>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <h3 class="built-with">Built using Blocksmith Studio</h3>
+                        <br>
+                        <p class="projects">I was selected from over 50 applicants for a paid internship with
+                            Stem
+                            Forged as part of Boise State University's first year offering the Beck Scholars
+                            program. I
+                            was tasked with building an endless-runner game similar to Subway Surfers using
+                            their custom engine. The engine uses a visual scripting system instead of
+                            traditional programming, so I created the game using variables, spawners, triggers,
+                            and conditional logic. I also implemented a shop system that lets players purchase
+                            new vehicle colors and upgrades. It was a fun, challenging project, and I’m proud of
+                            the final result. I also made the music and sound effects.</p>
                     </div>
 
+                    <div class="col-12 col-md-6">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/YJBCfjV2fs8?si=sW4xIQ7x2fE33eu6"
+                                title="Driver Dash Demo" allowfullscreen>
+                            </iframe>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="work-section">
-            <h1 class="project-title">Fall 2025 - Chord Generator</h1>
+        <div class="container">
+            <div class="work-section">
+                <h1 class="project-title">Fall 2025 - Chord Generator</h1>
 
-            <div class="row">
-                <div class="col-12 col-md-6">
-                    <h3 class="built-with">Built using HTML, CSS, and JavaScript.</h3>
-                    <br>
-                    <p class="projects">This Chord Progression Generator is a full-stack web app I built using HTML,
-                        CSS, Bootstrap, Node.js, and the OpenAI API. Users can select a musical style, scale, time
-                        signature, and BPM, and the server generates a machine-readable chord progression. I integrated
-                        Tone.js to play back the chords in real time and designed a streamlined UI with dropdown
-                        controls, a custom loader animation, and local storage support. This project combined my
-                        backgrounds in software development and music, and taught me a lot about API integration,
-                        asynchronous workflows, and structuring clean, interactive web tools.</p>
-                </div>
-
-                <div class="col-12 col-md-6">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/9yh5Ge4ysUI?si=MPdZu4nQo9kWblCm"
-                            title="Chord Progression Generator" allowfullscreen>
-                        </iframe>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <h3 class="built-with">Built using HTML, CSS, and JavaScript.</h3>
+                        <br>
+                        <p class="projects">This Chord Progression Generator is a full-stack web app I built using HTML,
+                            CSS, Bootstrap, Node.js, and the OpenAI API. Users can select a musical style, scale, time
+                            signature, and BPM, and the server generates a machine-readable chord progression. I
+                            integrated
+                            Tone.js to play back the chords in real time and designed a streamlined UI with dropdown
+                            controls, a custom loader animation, and local storage support. This project combined my
+                            backgrounds in software development and music, and taught me a lot about API integration,
+                            asynchronous workflows, and structuring clean, interactive web tools.</p>
                     </div>
 
-                    <br>
-                    <a href="https://github.com/PaigeSimm1/ChordGen" class="btn github-repo" target="_blank">GitHub
-                        Repository</a>
-                </div>
-            </div>
+                    <div class="col-12 col-md-6">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/9yh5Ge4ysUI?si=MPdZu4nQo9kWblCm"
+                                title="Chord Progression Generator" allowfullscreen>
+                            </iframe>
+                        </div>
 
-            <div class="row">
-                <div class="col-12 col-md-6">
-                    <div class="carousel slide" id="cgCarousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <pre><code class="language-javascript">
+                        <br>
+                        <a href="https://github.com/PaigeSimm1/ChordGen" class="btn github-repo" target="_blank">GitHub
+                            Repository</a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="carousel slide" id="cgCarousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <pre><code class="language-javascript">
 document.getElementById("play-btn").addEventListener("click", playProgression);
 
 // Protects against playing a blank progression
@@ -433,10 +449,10 @@ async function playProgression() {
     Tone.Transport.start(); // Plays the progression!
 }
 </code></pre>
-                            </div>
+                                </div>
 
-                            <div class="carousel-item">
-                                <pre><code class="language-javascript">
+                                <div class="carousel-item">
+                                    <pre><code class="language-javascript">
 startGeneratingAnim();
 
 const saved = JSON.parse(localStorage.getItem("pendingChordForm"));
@@ -463,31 +479,35 @@ fetch('http://127.0.0.1:3000', {
     stopGeneratingAnim();
 });
 </code></pre>
+                                </div>
                             </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#cgCarousel"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#cgCarousel"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#cgCarousel"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#cgCarousel"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
+    </main>
     <footer>
         <div class="container-fluid">
             <div class="row link-bar">
 
                 <!-- Logo -->
                 <div class="col-6">
-                    <img src="Content/Photos/transparentlogo.png" class="transparentlogo">
+                    <img src="Content/Photos/transparentlogo.png" 
+                    class="transparentlogo" 
+                    alt="Colorful P and S Logo."
+                    decoding="async" 
+                    loading="lazy">
                 </div>
 
                 <!-- Nav -->
@@ -506,14 +526,14 @@ fetch('http://127.0.0.1:3000', {
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
         </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-lua.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-csharp.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-lua.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-csharp.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
 </body>
 
 </html>
