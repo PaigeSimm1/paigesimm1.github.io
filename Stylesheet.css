@@ -19,7 +19,8 @@ div.link-bar {
 }
 
 .transparentlogo {
-    height: 60px;
+    max-height: 60px;
+    height: auto;
     width: auto;
     max-width: 100%;
     padding-left: 10px;
