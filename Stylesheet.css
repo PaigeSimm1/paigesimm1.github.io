@@ -214,14 +214,11 @@ padding-bottom: 1rem;
 
 .star {
     color: #d10000;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .form-element .btn {
     margin-bottom: 1rem;
-}
-
-.form-element .btn {
     background-color: #414141;
 }
 
@@ -231,13 +228,6 @@ padding-bottom: 1rem;
     font-weight: 400;
     font-display: swap;
 }
-
-@font-face {
-    font-family: "Montserrat";
-    src: url(Content/Fonts/Montserrat-Bold.otf);
-    font-weight: 600;
-    font-display: swap;
-}  
 
 @font-face {
     font-family: "Montserrat";
