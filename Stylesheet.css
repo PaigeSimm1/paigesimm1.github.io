@@ -21,6 +21,7 @@ div.link-bar {
 .transparentlogo {
     height: 60px;
     width: auto;
+    max-width: 100%;
     padding-left: 10px;
 }
 
