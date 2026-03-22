@@ -1,7 +1,20 @@
-.nav-bar {
+/* Header and Footer Styling */
+.nav-bar,
+.link-bar {
     background-color: white;
     padding: 0 20px;
+}
+
+.nav-bar {
     height: 8rem;
+}
+
+.link-bar {
+    height: 6rem;
+}
+
+div.nav-bar,
+div.link-bar {
     align-items: center;
 }
 
@@ -10,45 +23,58 @@
     padding-left: 10px;
 }
 
-.nav {
-    flex-wrap: nowrap;
-    text-align: right;
+.header-navs .nav,
+.footer-navs .nav {
+    justify-content: end;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 1.5rem;
 }
 
-.nav-link {
-    padding-left: 2rem;
-    padding-right: 2rem;
+.nav-link,
+.footer-link {
     color: #1a1b1f;
-    font-size: 20px;
     font-family: "Altone";
 }
 
+.nav-link {
+    font-size: 20px;
+}
+
+.footer-link {
+    font-size: 18px;
+    text-decoration: none;
+}
+
 .active {
-    padding-left: 2rem;
-    padding-right: 2rem;
     color: #ff0040;
     font-size: 20px;
     font-family: "Altone";
 }
 
+/* Body Styling */
 body {
     background-color: #f2f0f0;
 }
 
 .about-body {
     padding-top: 8rem;
-    padding-bottom: 8rem;
+    padding-bottom: 4rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 .photo {
     display: flex;
     justify-content: center;
     align-content: center;
+    padding-bottom: 2rem;
 }
 
 .myPhoto {
     max-width: 90%;
     height: auto;
+    justify-content: center;
 }
 
 .name-block {
@@ -59,7 +85,7 @@ body {
 h1.name {
     font-family: "Montserrat";
     text-decoration: underline;
-    font-size: 40spx;
+    font-size: 40px;
     font-weight: 400;
 }
 
@@ -80,7 +106,8 @@ h2.why {
 h3.built-with {
     font-family: "Montserrat";
     font-size: 20px;
-    color: #1a1b1f
+    color: #1a1b1f;
+    font-weight: 400;
 }
 
 .subtitle {
@@ -98,11 +125,10 @@ h3.built-with {
 }
 
 p {
-    width: 90%;
     font-family: "Montserrat";
     font-size: 18px;
     font-weight: 400;
-    color: #616161;
+    color: #575757;
     line-height: 28px;
 }
 
@@ -110,7 +136,7 @@ p.projects {
     font-family: "Montserrat";
     font-size: 16px;
     font-weight: 400;
-    color: #616161
+    color: #4a4a4a
 }
 
 .work-section {
@@ -118,12 +144,16 @@ p.projects {
     padding-bottom: 3rem;
 }
 
+iframe {
+    margin-top: 1rem;
+}
 .github-repo {
     background-color: #ff294c;
     padding: 10px;
     font-family: "Montserrat";
     border-radius: 15px;
     color: white;
+    margin-top: 2rem;
 }
 
 .github-repo:hover {
@@ -134,6 +164,9 @@ p.projects {
     color: rgb(223, 223, 223);
 }
 
+.carousel {
+    margin-top: 4rem;
+}
 pre[class*="language-"],
 code[class*="language-"] {
     font-size: 12px;
@@ -148,33 +181,65 @@ pre[class*="language-"] {
     line-height: 1.35;
 }
 
-#scCarousel, #rjCarousel, #arCarousel, #cgCarousel {
+#scCarousel,
+#rjCarousel,
+#arCarousel,
+#cgCarousel {
     width: 100%;
+
 }
 
-.footer {
-    background-color: white;
-    padding: 0 20px;
-    height: 6rem;
+.contact {
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
-.link-bar {
-    flex-wrap: nowrap;
+.contact h3 {
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 35px;
 }
 
-.footer-link {
-    padding-left: 2rem;
-    padding-right: 2rem;
-    color: #1a1b1f;
-    font-size: 18px;
-    font-family: "Altone";
-    text-decoration: none;
+.form-label {
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 500;
+    color: #4a4a4a;
+}
+
+.form-element {
+padding-bottom: 1rem;
+}
+
+.star {
+    color: #d10000;
+    font-weight: 600;
+}
+
+.form-element .btn {
+    margin-bottom: 1rem;
+}
+
+.form-element .btn {
+    background-color: #414141;
 }
 
 @font-face {
     font-family: "Altone";
     src: url(Content/Fonts/AltoneTrial-Regular.ttf);
     font-weight: 400;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(Content/Fonts/Montserrat-Bold.otf);
+    font-weight: 600;
+}  
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(Content/Fonts/Montserrat-Medium.otf);
+    font-weight: 500;
 }
 
 @font-face {
